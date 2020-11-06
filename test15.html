@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("button.add").click(function() {
+			$("h1,h2,p").addClass("blue") //<body>태그 내 모든 h1,h2,p Style Class : blue 적용
+			$("div").addClass("important")//<body>태그 내 모든 div Style Class : important 적용		
+		})
+		$("button.remove").click(function() {
+			$("h1,h2,p").removeClass("blue")//<body>태그 내 모든 h1,h2,p Style Class : blue 해제
+			$("div").removeClass("important")//<body>태그 내 모든 div Style Class : important 해제
+		})
+		
+		$("button.toggle").click(function() {
+			$("#02,#03,#04").toggleClass("red")
+			$("#01").css({"background-color":"yellow","color":"blue"}) //해당하는 위치에 직접적으로 css적용시키기
+		})
+		
+	})
+</script>
+<style type="text/css">
+	.blue{ color: blue;}
+	.important{ font-weight: bold; font-size: 50pt;}
+	
+	.red{color:red;}
+</style>
+</head>
+<body style="background-color: skyblue;">
+
+	<button class="toggle">toggle 적용/해제</button>
+	<h1 id="01">html</h1> <h2 id="02">test</h2>
+	<h3 id="03">aaa</h3> <h4 id="04">bbb</h4>
+<hr>
+	<h1>HTML</h1> <h2>CSS</h2> <p>JS</p>
+	<div>java</div>
+	<button class="add">css적용</button>
+	<button class="remove">css해제</button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function() {
+		$("button").click(function(){$("p").hide()})
+		$(".view").click(function(){$("p").show()})
+	})	
+	/*
+	//위 코드의 간소화 1 : document 생략해도 됨
+	$().ready(function() {
+		$("button").click(function(){
+			$("p").hide()
+		})
+	})
+	//위 코드의 간소화 2 : 맨 앞 ( ) 및 ready 생략해도 됨
+	$(function() {
+		$("button").click(function(){
+			$("p").hide()
+		})
+	})
+	
+	//자바 스크립트 문법으로 메소드명을 명시했을 경우 on이벤트를 사용해야만 한다.
+	function test(){$("p").hide()}
+	*/
+</script>
+	
+</head>
+<body style="background-color: skyblue">
+	<p> 메시지 : 제이쿼리</p>
+	<button type="button" onclick="test()"> 메시지 삭제</button>
+	<input type="button" class="view" value="클릭">
+</body>
+</html>
